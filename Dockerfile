@@ -21,6 +21,9 @@ WORKDIR /data
 # copy start script to container
 COPY ./start.sh /
 
+ENV PORT=8080
+EXPOSE ${PORT}
+
 # make the script executable
 RUN chmod +x /start.sh
 
